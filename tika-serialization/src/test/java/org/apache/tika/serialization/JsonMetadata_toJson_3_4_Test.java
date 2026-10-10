@@ -21,11 +21,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.IOException;
 import java.io.StringWriter;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.apache.tika.metadata.Metadata;
 
 public class JsonMetadata_toJson_3_4_Test {
+
+    @BeforeEach
+    public void resetPrettyPrinting() {
+        JsonMetadata.setPrettyPrinting(false);
+    }
 
     @Test
     public void testToJson() throws IOException {

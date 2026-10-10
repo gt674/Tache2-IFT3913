@@ -187,6 +187,8 @@
           </targetClasses>
           <targetTests>
             <param>org.apache.tika.serialization.JsonMetadataTest</param>
+            <param>org.apache.tika.serialization.JsonMetadata_toJson_3_4_Test</param>
+            <param>org.apache.tika.serialization.JsonMetadata_fromJson_4_0_Test</param>
           </targetTests>
         </configuration>
       </plugin>
