@@ -298,15 +298,6 @@ Dans le rapport pitest final, ces deux mutants sont tués (7/7 au total).
 
 ## 8. Exécution
 
-Les nouveaux tests (2 générés nettoyés + 2 à la main) passent dans la GitHub Action.
-
-[À COMPLÉTER : le fichier du workflow (`.github/workflows/...`), la commande exécutée et le lien vers l'exécution verte.]
-
-![GitHub Action](docs/images/github-action-vert.png)
-
-Le workflow lance les tests du module `tika-serialization` avec Java 17, sans le profil `-Pfast` (qui saute les tests), et sans Ollama.
-
-Nombre de tests : 216 au départ (dont 2 ignorés), 219 avec les tests générés, [À CONFIRMER : 221 avec les tests à la main, c'est notre calcul, pas vérifié].
 
 ## Pour refaire les mesures
 
