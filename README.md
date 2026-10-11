@@ -26,7 +26,7 @@ Ensuite on a ajouté pitest et lancé une première analyse avec seulement `Json
 
 pitest compte 33/36 lignes (92 %) alors qu'IntelliJ dit 27/30, les deux outils ne comptent pas pareil.
 
-![pitest au départ, sommaire](docs/images/pit-baseline-sommaire.png)
+<img src="docs/images/pit-baseline-sommaire.png" alt="pitest au départ, sommaire" width="300">
 ![pitest au départ, mutants de JsonMetadata](docs/images/pit-baseline-mutants.png)
 
 Donc la classe a des tests, n'est pas à 100 % et a des mutants vivants, ce qui correspond à ce que demande la tâche.
@@ -227,14 +227,18 @@ Pour le score de base, `targetTests` ne contenait que `JsonMetadataTest`. On a e
 
 La seule ligne non couverte à la fin est la ligne 32 (`public class JsonMetadata {`, le constructeur implicite), qui n'a pas de mutant.
 
-Tests originaux :
-![pitest originaux](docs/images/pit-baseline-sommaire.png)
+**Tests originaux :**
 
-Avec les tests générés :
-![pitest avec tests générés](docs/images/pit-generes-sommaire.png)
+<img src="docs/images/pit-baseline-sommaire.png" alt="pitest originaux" width="300">
 
-Avec les tests à la main (final) :
-![pitest final](docs/images/pit-final-sommaire.png)
+**Avec les tests générés :**
+
+<img src="docs/images/pit-generes-sommaire.png" alt="pitest avec tests générés" width="300">
+
+**Avec les tests à la main (final) :**
+
+<img src="docs/images/pit-final-sommaire.png" alt="pitest final" width="300">
+
 
 Les rapports complets sont dans `docs/pit-reports/` (`baseline/`, `avec-generes/`, `final/`, ouvrir `index.html` dans un navigateur).
 
