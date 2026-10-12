@@ -1,0 +1,23 @@
+name: Tache2 tests
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Build tika-serialization and its dependencies (no tests)
+        run: ./mvnw install -Pfast -Dossindex.skip -pl :tika-serialization -am
+
+      - name: Run tika-serialization tests
+        run: ./mvnw test -pl :tika-serialization -Dossindex.skip

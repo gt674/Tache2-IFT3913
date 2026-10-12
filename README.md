@@ -298,3 +298,16 @@ Les deux tests sauvegardent les contraintes d'origine avant (`@BeforeEach`) et l
 Dans le rapport pitest final, ces deux mutants sont tués (7/7 au total).
 
 ![mutants tués, rapport final](docs/images/pit-final-mutants.png)
+
+
+## Déclaration d'utilisation de l'IA générative
+
+En plus de ChatUniTest (qwen2.5-coder:7b en local), prévu par la tâche, nous avons utilisé Claude (Anthropic) comme aide pour :
+nettoyer les tests générés, écrire les tests supplémentaires (`JsonMetadataConstraintsTest`), assembler et mettre en forme
+dans le rapport les résultats que nous lui avons fournis (avec les explications qui les accompagnent), et écrire le workflow GitHub Action.
+
+Nous avons choisi la classe d'après la couverture, lancé toutes les commandes (trois exécutions de ChatUniTest, pitest
+à chaque étape, le build), et relu les résultats. Tous les chiffres du rapport viennent de nos exécutions, et nous avons décidé 
+quels tests générés garder.
+
+Anthropic. (2026). *Claude* (Sonnet 5.5) [grand modèle de langage]. Généré du 2 au 11 octobre 2026 à https://claude.ai
