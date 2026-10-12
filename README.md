@@ -298,19 +298,3 @@ Les deux tests sauvegardent les contraintes d'origine avant (`@BeforeEach`) et l
 Dans le rapport pitest final, ces deux mutants sont tués (7/7 au total).
 
 ![mutants tués, rapport final](docs/images/pit-final-mutants.png)
-
-
-## 8. Exécution
-
-
-## Pour refaire les mesures
-
-```
-./mvnw clean install -Pfast -Dossindex.skip -pl :tika-serialization -am
-./mvnw test -pl :tika-serialization -Dossindex.skip
-ollama pull qwen2.5-coder:7b
-./mvnw chatunitest:class -DselectClass=JsonMetadata -pl :tika-serialization -Dossindex.skip
-./mvnw org.pitest:pitest-maven:mutationCoverage -pl :tika-serialization -Dossindex.skip
-```
-
-Le rapport pitest est dans `tika-serialization/target/pit-reports/<date>/index.html`. Il faut le JDK 17 dans le terminal (`JAVA_HOME`).
